@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{mangas[0].type}} from API</title>
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+    <link rel="stylesheet" href="/static/style.css">
+
+</head>
+
+<body>
+    <div>
+        {% for manga in mangas: %}
+        <div class="myDiv">
+            <header>
+                <hgroup>
+                    <h3>{{manga.title}}</h3>
+                    <h4><b>Genre:</b>
+                        {{manga.genre}}
+                    </h4>
+                </hgroup>
+                <img src="{{manga.image}}" alt="Poster of {{manga.title}} manga">
+            </header>
+            <main>
+                <p><b>Other Names: </b>{{manga.syn}}</p>
+                <p><b>{{list[1]}}</b> {{manga.volumes }}</p>
+                <p><b>{{list[0]}} </b> {{manga.chapters}}</p>
+                <p><b>{{list[2]}} </b> {{manga.authors}}</p>
+                <p><b>Type: </b>{{manga.type}}</p>
+                <p><b>MyAnimeListRank: </b> {{manga.rank}}</p>
+                <a href="{{manga.url}}" target="_blank" rel="noopener noreferrer">MAL Link</a>
+                <p><b>Status:</b> {{manga.status}}</p>
+                <p><b>Release:</b> {{manga.release}}</p>
+                <details>
+                    <summary>Plot Of The {{manga.type}}:</summary>
+                    <p>{{manga.plot}}</p>
+                </details>
+                <details>
+                    <summary>Background Of The {{manga.type}}:</summary>
+                    <p>{{manga.story}}</p>
+                </details>
+
+            </main>
+        </div>
+        <hr>
+        {% endfor %}
+    </div>
+
+</body>
+
+</html>

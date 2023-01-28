@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+    <title>Mangas/Anime From API</title>
+
+</head>
+
+<body>
+    <h4>This website is a test website that uses manga/anime api to grab manga/anime data from Jikan API and show here.</h4>
+    <div>
+        <p>You can use url like this:</p>
+        <a href="{{ url_for('show_manga',content='manga') }}">Show Manga</a>
+        <span>Or</span>
+        <a href="{{ url_for('show_manga',content='anime') }}">Show Anime</a>
+    </div>
+
+</body>
+
+</html>
